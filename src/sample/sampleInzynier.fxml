@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="BP_Okno" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerInzynier">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Plik">
+               <items>
+                  <MenuItem fx:id="MI_Zapisz" mnemonicParsing="false" onAction="#MI_Zapisz_Action" text="Zapisz" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Opcje">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Uprawnienia">
+            <items>
+              <MenuItem fx:id="MI_WyswietlListeUprawnien" mnemonicParsing="false" onAction="#MI_WyswietlListeUprawnien_Action" text="Wyświetl listę uprawnień" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Pomoc">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Text fx:id="T_Zalogowano" strokeType="OUTSIDE" strokeWidth="0.0" text="Zalogowano jako inżynier" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </center>
+</BorderPane>

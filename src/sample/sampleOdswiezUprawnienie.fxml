@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="BP_Okno" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerOdswiezUprawnienie">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                    <items>
+                  <MenuItem fx:id="MI_Zapisz" mnemonicParsing="false" onAction="#MI_Zapisz_Action" text="Zapisz" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Opcje">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Uprawnienia">
+                    <items>
+                        <MenuItem fx:id="MI_WyswietlListeUprawnien" mnemonicParsing="false" onAction="#MI_WyswietlListeUprawnien_Action" text="Wyświetl listę uprawnień" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <bottom>
+        <BorderPane BorderPane.alignment="CENTER">
+            <bottom>
+                <Button fx:id="B_Zapisz" mnemonicParsing="false" onAction="#B_Zapisz_Action" text="Zapisz" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </BorderPane.margin>
+                </Button>
+            </bottom>
+            <top>
+                <BorderPane BorderPane.alignment="CENTER">
+                    <top>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj datę odnowienia uprawnienia" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </Text>
+                    </top>
+                    <center>
+                        <TextField fx:id="TF_NowaDataOd" promptText="RRRR:MM:DD" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </TextField>
+                    </center>
+                </BorderPane>
+            </top>
+            <center>
+                <BorderPane BorderPane.alignment="CENTER">
+                    <top>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj datę końca uprawnienia" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </Text>
+                    </top>
+                    <center>
+                        <TextField fx:id="TF_NowaDataDo" promptText="RRRR:MM:DD" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </TextField>
+                    </center>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </bottom>
+    <center>
+        <Text fx:id="T_Nazwa" strokeType="OUTSIDE" strokeWidth="0.0" text="Odświeżenie uprawnienia: Nazwa Uprawnienia" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </Text>
+    </center>
+</BorderPane>
